@@ -24,7 +24,7 @@ def update_qq_group():
         conn = MySQLdb.connect(host=QQFinderConfig.MYSQL_HOST, user=QQFinderConfig.MYSQL_USER, passwd=QQFinderConfig.MYSQL_PASSWORD, db=QQFinderConfig.MYSQL_DB, port=QQFinderConfig.MYSQL_PORT, charset='UTF8')
         cursor = conn.cursor()
         group_sql = "INSERT INTO `qq_group`(`g`, `last_speak_time`, `tags`, `lv_point`, `qage`, `uin`, `nick`, `flag`, `role`, `lv_level`, `join_time`, `card`, `group_id`) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-        for qq_group in qq_group_number:
+        for qq_group in qq_group_number: 334087539
             qq_group_finder.setGc(qq_group)
             qq_group_member = qq_group_finder.getQQGroupMember('dict')
             cursor.execute('DELETE FROM `qq_group` WHERE `group_id` = %s', (qq_group))
