@@ -15,7 +15,7 @@ import random
 import TaskManager
 
 qq_group_number = [
-    497394781,
+    334087539,
 ]
 
 def update_qq_group():
